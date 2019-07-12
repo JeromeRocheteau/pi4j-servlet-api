@@ -6,8 +6,27 @@
   <version>0.1-1</version>
   <packaging>jar</packaging>
   <name>pi4j-servlet-api</name>
+  <url>https://github.com/jeromerocheteau/pi4j-servlet-api</url>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <name>Jérôme Rocheteau</name>
+      <email>jerome.rocheteau@free.fr</email>
+      <organization>Jérôme Rocheteau</organization>
+      <organizationUrl>https://github.com/jeromerocheteau</organizationUrl>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git://github.com/jeromerocheteau/pi4j-servlet-api.git</connection>
+    <developerConnection>scm:git:ssh://github.com:jeromerocheteau/pi4j-servlet-api.git</developerConnection>
+    <url>https://github.com/jeromerocheteau/pi4j-servlet-api/tree/master</url>
+   </scm>
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <encoding>UTF-8</encoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
@@ -38,4 +57,20 @@
       <scope>provided</scope>
     </dependency>
   </dependencies>
+  <distributionManagement>
+    <repository>
+      <id>ftp-repository</id>
+      <name>FTP Repository</name>
+      <url>ftp://ftpperso.free.fr/maven/repository</url>
+    </repository>
+  </distributionManagement>
+  <build>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+         <artifactId>wagon-ftp</artifactId>
+         <version>1.0-beta-6</version>
+      </extension>
+    </extensions>
+  </build>
 </project>
